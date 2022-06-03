@@ -1,0 +1,123 @@
+
+/* PACMAN */
+.frame {
+    position: absolute;
+    top: 72%;
+    left: 28%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    color: var(--cinza);
+    font-family: 'Poppins', 'Times New Roman', Times, serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .frame .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background:transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .frame .center .pacman {
+    width: 28%;
+    height: 28%;
+    background: var(--gold);
+    border-radius: 50%;
+    position: relative;
+  }
+  .frame .center .pacman .eye {
+    width: 12%;
+    height: 12%;
+    background: var(--cinza-esc);
+    border-radius: 50%;
+    position: absolute;
+    top: 22%;
+    right: 30%;
+    z-index: 3;
+    animation: eye-move 0.35s linear infinite alternate;
+  }
+  @keyframes eye-move {
+    0% {
+      top: 22%;
+      right: 30%;
+    }
+    100% {
+      top: 17%;
+      right: 35%;
+    }
+  }
+  .frame .center .pacman .mouth {
+    width: 50%;
+    height: 50%;
+    border-radius: 0 0 100% 0;
+    top: 50%;
+    right: -1%;
+    transform-origin: 0% 0%;
+    position: absolute;
+  }
+  .frame .center .pacman .mouth-space {
+    background: var(--cinza-esc);
+    transform: rotateZ(-45deg);
+    z-index: 1;
+  }
+  .frame .center .pacman .mouth-top {
+    background: var(--gold);
+    z-index: 2;
+    animation: open-mouth-top 0.35s linear infinite alternate;
+  }
+  @keyframes open-mouth-top {
+    0% {
+      transform: rotateZ(-85deg);
+    }
+    100% {
+      transform: rotateZ(-130deg);
+    }
+  }
+  .frame .center .pacman .mouth-bottom {
+    background: var(--gold);
+    z-index: 2;
+    animation: open-mouth-bottom 0.35s linear infinite alternate;
+  }
+  @keyframes open-mouth-bottom {
+    0% {
+      transform: rotateZ(0deg);
+    }
+    100% {
+      transform: rotateZ(40deg);
+    }
+  }
+  .frame .center svg {
+    width: 50%;
+    height: 30%;
+    position: absolute;
+    top: 38%;
+    right: 0;
+    z-index: 2;
+  }
+  
+.frame .center svg line {
+    stroke: var(--gold);
+    stroke-width: 7px;
+    stroke-dasharray: 0, 31;
+    stroke-linecap: round;
+    animation: move-pellets 4.2s linear infinite;
+  }
+@keyframes move-pellets {
+    0% {
+      stroke-dashoffset: -4;
+    }
+    100% {
+      stroke-dashoffset: 182;
+    }
+  }
+  

@@ -1,0 +1,45 @@
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-title {
+    font-size: 4rem;
+    font-weight: 500;
+    color: var(--black);
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    text-align: center;
+}
+
+/* Menu label */
+.close-menu {
+    display: none;
+}
+
+.menu-spacing {
+    height: 6.4rem;
+}
+
+
+/* Botão voltar ao topo */
+.back-to-top {
+    position: fixed;
+    bottom: 2.5rem;
+    right: 2rem;
+    background-image: var(--linear-gradient-purple2);
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: var(--white);
+    border: 0.1rem solid var(--gold);
+    font-size: 2.2rem;
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./assets/css/variables.css">
+  <link rel="stylesheet" href="./assets/css/elements.css">
+  <link rel="stylesheet" href="./assets/css/classes.css">
+  <link rel="stylesheet" href="./assets/css/pacman.css">
+  <link rel="stylesheet" href="./assets/css/menu.css">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>   
+  <title>Henrique da Silva</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <input id="close-menu" class="close-menu" type="checkbox" aria-label="Close menu" role="button">
+    <label class="close-menu-label" for="close-menu" title="close menu"></label>
+    <aside class="menu">
+        <section class="main-content">
+            <h1 onclick="getElementById('close-menu').checked = false;"><a href="#home"></a>
+            </h1>
+                <nav>
+                    <ul class="lista" onclick="getElementById('close-menu').checked = false;">
+                        <li><a href="#presentation">Home</a></li>
+                        <li><a href="#projeto1">Projeto 1</a></li>
+                        <li><a href="#projeto2">Projeto 2</a></li>
+                        <li><a href="#projeto3">Projeto 3</a></li>
+                        <li><a href="#projeto4">Projeto 4</a></li>
+                    </ul>
+                </nav>
+        </section>
+    </aside>
+
+    <div class="menu-spacing"></div>
+
+    <!-- Apresentação -->
+    <section id="presentation">
+        <div class="presentation container">
+            <div>
+                <h1>Prazer,<span></span></h1>
+                <h1>meu nome é<span></span></h1>
+                <h1>Henrique<span></span></h1>
+                <a href="#portfolio" type="button" class="cta">Portifólio</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pacman -->
+    <section> 
+        <a href="#portifolio-main">
+            <div class="frame">
+                <div class="center">
+                <div class="pacman">
+                    <div class="eye"></div>
+                    <div class="mouth mouth-space"></div>
+                    <div class="mouth mouth-top"></div>
+                    <div class="mouth mouth-bottom"></div>
+                </div>
+                <svg viewBox="0 0 100 10">
+                    <line x1="0" y1="0" x2="100" y2="0" />
+                </svg>
+                </div>
+            </div>
+        </a>
+    </section>
+
+    <!-- Portifolio -->
+    <section id="portfolio">
+        <div class="portfolio container" id="projeto1">
+            <div class="portfolio header" id="portifolio-main" >
+                <h1 class="section-title"><span>Portifólio</span></h1>
+            </div>
+            <div class="all-projects">
+                <div class="project-item" >
+                    <div class="project-info">
+                        <h1>Projeto 1</h1>
+                        <h2>Snake game com Python</h2>
+                        <p>Quase todo mundo já jogou alguma vez o famoso Jogo da Cobrinha. Então resolvi criar o meu proprio jogo com Python, um projeto relativamente simples mas que adquiri mais conhecimento no desenvolvimento de Jogos.</p>
+                    </div>
+                    <h1 id="projeto2"></h1>
+                    <div class="project-img">
+                        <img src="./assets/img/snake-game.png" alt="img">
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="project-info">
+                        <h1>Projeto 2</h1>
+                        <h2>Agenda com PHP</h2>
+                        <p>Neste projeto aprendi a trabalhar PHP junto com Banco de Dados, realizando todas as operaçoes principais de um Banco (CRUD).</p>
+                    </div>
+                    <div class="project-img">
+                        <img src="./assets/img/agenda.png" alt="img">
+                        </div>
+                        <h1 id="projeto3"></h1>
+                </div>
+                <div class="project-item" >
+                    <div class="project-info">
+                        <h1>Projeto 3</h1>
+                        <h2>E-commerce com Python & Django</h2>
+                        <p>Projeto desenvolvido do zero com o framework Django. Utilizei o Django Admin para administrar e adicionar de forma automática os conteúdos ao site.
+                        </p>
+                        <p>Deixei o site responsivo, possibilitando dar uma aparência diferente para cada resolução detectada.</p>
+                    </div>
+                    <div class="project-img">
+                        <img src="./assets/img/ecommerce.png" alt="img">
+                    </div>
+                </div>
+                <div class="project-item" id="projeto4">
+                    <div class="project-info">
+                        <h1>Projeto 4</h1>
+                        <h2>Recriando a interface do Netflix</h2>
+                        <p>Projeto desenvolvido do zero com HTML e CSS. Onde o principal objetivo era colocar em pratica o que foi aprendido ao longo de uma aula. </p>
+                    </div>
+                    <div class="project-img">
+                        <img src="./assets/img/netflix.png" alt="img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section>
+        <footer id="footer">
+            <div id="social-container">
+                <ul>
+                    <li>
+                        <a href="https://www.linkedin.com/in/henrique-da-silva-sousa-2a077622b/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/henriquedss1912" target="_blank"><i class="fab fa-github"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <p>&copy; 2022 Henrique da Silva Sousa</p>
+        </footer>
+
+        <a class="back-to-top" role="button" aria-label="Back to top" href="#">🔝</a>
+        <!-- &#8250; -->
+    </section>
+
+</body>
+</html>

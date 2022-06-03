@@ -1,0 +1,14 @@
+:root{
+    --white: #FFF;
+    --gold: #ffd700;
+    --yellow-opacity: #e7d675;
+    --black: #000;
+    --cinza: #333;
+    --cinza-esc: #2C2E2E;
+    --purple: #5a10b5;
+    --blue-dark: #002349 ;
+
+    --linear-gradient-purple: linear-gradient(60deg, #5a10b5 0%, #002349 100%);
+    --linear-gradient-purple2: linear-gradient(80deg, #5a10b5 10%, #001a33 100%);
+    --linear-gradient-grey: linear-gradient(60deg, #29323c 0%, #485563 100%);
+}

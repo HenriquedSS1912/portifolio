@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,200;1,500&display=swap');
+
+
+/* Seção de apresentação */
+#presentation{ 
+  background-image: url(../img/background.jpeg);
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  z-index: -1;
+}
+#presentation h1{
+  display: block;
+  width: fit-content;
+  font-size: 5rem;
+  position: relative;
+  color: transparent;
+  animation: text_reveal .5s ease forwards;
+  animation-delay: 1.5s;
+}
+#presentation h1:nth-child(1){
+  animation-delay: .8s;
+}
+#presentation h1:nth-child(2){
+  animation-delay: 1.8s;
+}
+#presentation h1:nth-child(3){
+  animation: text_reveal_name .5s ease forwards;
+  animation-delay: 2.8s;
+}
+#presentation .cta{
+  display: inline-block;
+  padding: 1rem 3rem;
+  color: var(--gold);
+  background-color: transparent;
+  border: 0.4rem solid var(--gold);
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  margin-top: 2rem;
+  transition: .5s ease;
+  transition-property: background-color, color;
+  z-index: 3;
+}
+
+#presentation .cta{
+  position: relative;
+  z-index: 3;
+}
+
+#presentation .cta:hover{
+  color: var(--white);
+  font-weight: 500;
+  background-color: var(--gold);
+}
+#presentation h1 span{
+  position: absolute;
+  top: 0;
+  left:0;
+  height: 100%;
+  width: 0%;
+  animation: text_reveal_box 1s ease;
+  animation-delay: .5s;
+  background-color: var(--gold);
+}
+
+#presentation h1:nth-child(1) span{
+  animation-delay: .5s;
+}
+#presentation h1:nth-child(2) span{
+  animation-delay: 1.5s;
+}
+#presentation h1:nth-child(3) span{
+  animation-delay: 2.5s;
+}
+#presentation::after{
+  content: '';
+  position: absolute;
+  left:0;
+  top: 0;
+  height:100%;
+  width: 100%;
+  background-color:var(--black);
+  opacity: 0.5;
+  z-index: -2;
+}
+
+/* Keyframes */
+
+@keyframes text_reveal{
+  100%{
+      color: var(--white);
+  }
+}
+@keyframes text_reveal_name{
+  100%{
+      color: var(--gold);
+      font-weight: 50rem;
+  }
+}
+
+@keyframes text_reveal_box{
+  50%{
+      width:100%;
+      left:0;
+  }
+  100%{
+      width: 0;
+      left:100%
+  }
+}
+
+/* Seção de Portifólio */
+#portfolio .portfolio{
+  flex-direction: column;
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 10rem 0;
+}
+
+#portfolio{
+  z-index: 0;
+}
+
+#portfolio .portfolio-header h1{
+  margin-bottom: 50px;
+}
+#portfolio .all-projects {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#portfolio .project-item{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  margin: 20rem auto;
+  overflow: hidden;
+}
+
+#portfolio .project-info {
+  padding: 3rem;
+  flex-basis: 50%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  background-image: var(--linear-gradient-purple);
+  color: var(--white);
+}
+
+#portfolio .project-info h1{
+  font-size: 4rem;
+  font-weight: 500;
+}
+
+#portfolio .project-info h2{
+  font-size: 2.3rem;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+#portfolio .project-info p{
+  font-size: 1.6rem;
+  margin-top: 5px;
+}
+
+#portfolio .project-img {
+  flex-basis: 50%;
+  height: 30rem;
+  overflow: hidden;
+  position: relative;
+}
+
+#portfolio .project-img:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top:0;
+  height: 100%;
+  width: 100%;
+  background-image: var(--linear-gradient-grey);
+  opacity: 0.7;
+}
+#portfolio .project-img img{
+  transition: 0.5s ease transform;
+}
+#portfolio .project-item:hover .project-img img{
+  transform: scale(1.1);
+}
+
+
+/* Footer */
+#footer {
+  background-image: var(--linear-gradient-purple);
+  color: var(--white);
+  text-align: center;
+  margin: 0;
+  padding: 5rem;
+}
+
+#footer p{
+  font-size: 2rem;
+}
+
+#social-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#social-container li {
+  display: inline-block;
+  margin: 0px 20px;
+}
+
+#social-container li a:hover {
+  color: var(--blue-dark);
+  height: 7rem;
+  width: 0px;
+  transition: .5s;
+}
+
+#social-container a {
+  font-size: 5rem;
+  color: var(--white);
+  transition: .5s;
+  text-decoration: none;
+}
+
+/* Media Query */
+@media only screen and (min-width: 768px) {
+  
+  #portfolio .project-item {
+      flex-direction: row;
+      height: 40rem;
+      margin: 0;
+      width: 80%;
+      border-radius: 0;
+  }
+  #portfolio .all-projects .project-info{
+      height: 100%
+  }
+  #portfolio .all-projects .project-img{
+      height: 100%
+  }
+  #portfolio .project-item:nth-child(even) {
+      flex-direction: row-reverse;
+  }
+  #portfolio .project-item:nth-child(odd) {
+      flex-direction: row;
+  }
+}
+
+
+@media (max-width: 850px){
+  body{
+    font-size: -5px;
+  }
+
+  nav{
+    text-align: center;
+    padding: 20% 40%;
+    margin-right: 30px;
+    grid-template-columns: 1fr;
+  }
+
+  .main-content ul{
+    flex-direction: column;
+  }
+
+  #portfolio .project-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 0.5rem auto;
+    overflow: hidden;
+  }
+
+  #portfolio .all-projects .project-info{
+      height: 100%
+  }
+  #portfolio .all-projects .project-img{
+      height: 100%
+  }
+  #presentation{
+    grid-template-columns: 1fr;
+  }
+
+  #portifolio .project-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 20rem auto;
+    overflow: hidden;
+  }
+
+  .menu {
+    bottom: 0;
+    display: none;
+  }
+
+  .close-menu-label::after {
+    content: '☰';
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    background: var(--linear-gradient-purple2);
+    color: var(--white);
+    font-size: 2.5rem;
+    line-height: 3rem;
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    padding: 0.4rem;
+    cursor: pointer;
+    margin: 9px 4px 0rem 0px ;
+  }
+
+  .close-menu:checked~.menu {
+    display: block;
+  }
+
+  .close-menu:checked~.close-menu-label::after {
+    content: '✕';
+  }
+
+  .menu-spacing {
+    display: none;
+  }
+
+  .frame {
+    position: absolute;
+    top: 90%;
+    left: 85%;
+    width: 250px;
+    height: 250px;
+    margin-top: -200px;
+    margin-left: -200px;
+  }
+
+}
